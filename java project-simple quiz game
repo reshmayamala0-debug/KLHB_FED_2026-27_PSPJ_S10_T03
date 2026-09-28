@@ -1,0 +1,46 @@
+import java.util.sacnner;
+
+public class QuizGame {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int score = 0;
+
+    System.out.println("Welcome to the Quiz Game!");
+    System.out.println("Answer the following questions:");
+
+    // Question 1
+    System.out.println("Question 1: What is the capital of France?");
+    String answer1 = scanner.nextLine();
+    if (answer1.equalsIgnoreCase("Paris")) {
+      score++;
+      System.out.println("Correct!");
+    } else {
+      System.out.println("Incorrect. The correct answer is Paris.");
+    }
+
+    // Question 2
+    System.out.println("Question 2: What is 5 + 7?");
+    int answer2 = scanner.nextInt();
+    if (answer2 == 12) {
+      score++;
+      System.out.println("Correct!");
+    } else {
+      System.out.println("Incorrect. The correct answer is 12.");
+    }
+
+    // Question 3
+    scanner.nextLine(); // Consume newline left-over
+    System.out.println("Question 3: Who wrote 'Romeo and Juliet'?");
+    String answer3 = scanner.nextLine();
+    if (answer3.equalsIgnoreCase("William Shakespeare")) {
+      score++;
+      System.out.println("Correct!");
+    } else {
+      System.out.println("Incorrect. The correct answer is William Shakespeare.");
+    }
+
+    // Final Score
+    System.out.println("Your final score is: " + score + "/3");
+    
+    scanner.close();
+  }
